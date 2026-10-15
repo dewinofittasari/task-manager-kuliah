@@ -1,9 +1,11 @@
 # 📚 Task Manager — Aplikasi Manajemen Tugas Kuliah
 
 <p align="center">
-  <img src="screenshots/screenshot_task_list.jpg" width="300" alt="Daftar Tugas"/>
+  <img src="screenshots/2_daftar_tugas.png" width="240" alt="Daftar Tugas"/>
   &nbsp;&nbsp;&nbsp;
-  <img src="screenshots/screenshot_task_form.jpg" width="300" alt="Form Tugas"/>
+  <img src="screenshots/4_form_input_tugas.png" width="240" alt="Form Tugas"/>
+  &nbsp;&nbsp;&nbsp;
+  <img src="screenshots/5_dialog_hapus_tugas.png" width="240" alt="Konfirmasi Hapus"/>
 </p>
 
 Aplikasi Android berbasis **Kotlin** untuk membantu mahasiswa mengelola tugas-tugas kuliah secara efisien. Data disimpan secara lokal menggunakan **Room Database** sehingga tetap tersedia tanpa koneksi internet.
@@ -107,10 +109,16 @@ app/src/main/
 ---
 
 ## 📸 Screenshots
+ 
+| 1. Daftar Tugas (Kosong) | 2. Daftar Tugas (Ada Tugas) | 3. Validasi Form |
+|:---:|:---:|:---:|
+| <img src="screenshots/1_daftar_tugas_kosong.png" width="240" alt="Daftar Tugas Kosong"/> | <img src="screenshots/2_daftar_tugas.png" width="240" alt="Daftar Tugas"/> | <img src="screenshots/3_form_validasi.png" width="240" alt="Validasi Form"/> |
 
-| Daftar Tugas | Form Tambah Tugas |
+<br/>
+
+| 4. Form Input Tugas | 5. Konfirmasi Hapus Tugas |
 |:---:|:---:|
-| ![Daftar Tugas](screenshots/screenshot_task_list.jpg) | ![Form Tugas](screenshots/screenshot_task_form.jpg) |
+| <img src="screenshots/4_form_input_tugas.png" width="240" alt="Form Input Tugas"/> | <img src="screenshots/5_dialog_hapus_tugas.png" width="240" alt="Dialog Hapus Tugas"/> |
 
 ---
 
