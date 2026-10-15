@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.list.TaskListFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Filter Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardElevation="2dp"
+            app:cardCornerRadius="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Filter Prioritas"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:textColor="?attr/colorOnSurfaceVariant" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupPrioritas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:singleSelection="true"
+                    app:selectionRequired="false">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipRendah"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rendah" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipSedang"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sedang" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipTinggi"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tinggi" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipUrgent"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Urgent" />
+
+                </com.google.android.material.chip.ChipGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Filter Status"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp"
+                    android:textColor="?attr/colorOnSurfaceVariant" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:singleSelection="true"
+                    app:selectionRequired="false">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipBelum"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Belum" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipDikerjakan"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dikerjakan" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipSelesai"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Selesai" />
+
+                </com.google.android.material.chip.ChipGroup>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnHapusFilter"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="Hapus Filter"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Empty State -->
+        <TextView
+            android:id="@+id/tvEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Belum ada tugas.\nTekan + untuk menambahkan tugas baru."
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:visibility="gone" />
+
+        <!-- Task List -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewTasks"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:padding="8dp"
+            tools:listitem="@layout/item_task" />
+
+    </LinearLayout>
+
+    <!-- FAB Tambah Tugas -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabTambahTugas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:contentDescription="Tambah Tugas"
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:tint="@android:color/white" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

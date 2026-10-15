@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <!-- Checkbox -->
+        <CheckBox
+            android:id="@+id/checkboxSelesai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp" />
+
+        <!-- Content -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Judul -->
+            <TextView
+                android:id="@+id/tvJudul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="?attr/colorOnSurface"
+                android:maxLines="2"
+                android:ellipsize="end"
+                tools:text="Tugas Pemrograman Web" />
+
+            <!-- Mata Kuliah -->
+            <TextView
+                android:id="@+id/tvMataKuliah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:layout_marginTop="2dp"
+                tools:text="Pemrograman Web" />
+
+            <!-- Deadline -->
+            <TextView
+                android:id="@+id/tvDeadline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp"
+                android:drawablePadding="4dp"
+                tools:text="25 Okt 2026, 23:59" />
+
+            <!-- Chips for Prioritas & Status -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="6dp">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipPrioritas"
+                    style="@style/Widget.Material3.Chip.Assist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:textSize="11sp"
+                    android:clickable="false"
+                    tools:text="Tinggi" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipStatus"
+                    style="@style/Widget.Material3.Chip.Assist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:textSize="11sp"
+                    android:layout_marginStart="4dp"
+                    android:clickable="false"
+                    tools:text="Belum Dikerjakan" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Delete Button -->
+        <ImageButton
+            android:id="@+id/btnHapus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Hapus tugas"
+            android:src="@android:drawable/ic_menu_delete"
+            app:tint="?attr/colorError" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Task Manager - Tugas Kuliah</string>
+    <string name="tambah_tugas">Tambah Tugas</string>
+    <string name="edit_tugas">Edit Tugas</string>
+    <string name="hapus_tugas">Hapus Tugas</string>
+    <string name="simpan">Simpan</string>
+    <string name="batal">Batal</string>
+    <string name="cari_tugas">Cari tugas...</string>
+    <string name="tugas_berhasil_ditambahkan">Tugas berhasil ditambahkan</string>
+    <string name="tugas_berhasil_diperbarui">Tugas berhasil diperbarui</string>
+    <string name="tugas_berhasil_dihapus">Tugas berhasil dihapus</string>
+    <string name="konfirmasi_hapus">Apakah Anda yakin ingin menghapus tugas ini?</string>
+    <string name="belum_ada_tugas">Belum ada tugas.\nTekan + untuk menambahkan tugas baru.</string>
+</resources>

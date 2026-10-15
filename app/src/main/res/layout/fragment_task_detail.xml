@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detail.TaskDetailFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Judul -->
+        <TextView
+            android:id="@+id/tvJudul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface"
+            tools:text="Tugas Pemrograman Web" />
+
+        <!-- Chips -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipPrioritas"
+                style="@style/Widget.Material3.Chip.Assist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                tools:text="Tinggi" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipStatus"
+                style="@style/Widget.Material3.Chip.Assist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:clickable="false"
+                tools:text="Belum Dikerjakan" />
+
+        </LinearLayout>
+
+        <!-- Overdue Warning -->
+        <TextView
+            android:id="@+id/tvLabelOverdue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="⚠️ Tugas ini sudah melewati deadline!"
+            android:textColor="@color/overdue_red"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="12dp" />
+
+        <!-- Mata Kuliah -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mata Kuliah"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="?attr/colorPrimary" />
+
+        <TextView
+            android:id="@+id/tvMataKuliah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginTop="4dp"
+            tools:text="Pemrograman Web" />
+
+        <!-- Deadline -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Deadline"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginTop="16dp"
+            android:textColor="?attr/colorPrimary" />
+
+        <TextView
+            android:id="@+id/tvDeadline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginTop="4dp"
+            tools:text="Senin, 25 Oktober 2026 - 23:59" />
+
+        <!-- Deskripsi -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Deskripsi"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginTop="16dp"
+            android:textColor="?attr/colorPrimary" />
+
+        <TextView
+            android:id="@+id/tvDeskripsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_marginTop="4dp"
+            tools:text="Membuat website responsive menggunakan HTML, CSS, dan JavaScript" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="12dp" />
+
+        <!-- Tanggal Dibuat -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tanggal Dibuat"
+            android:textSize="12sp"
+            android:textColor="?attr/colorOnSurfaceVariant" />
+
+        <TextView
+            android:id="@+id/tvTanggalDibuat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:layout_marginTop="2dp"
+            tools:text="20 Oktober 2026 - 10:30" />
+
+        <!-- Terakhir Diubah -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Terakhir Diubah"
+            android:textSize="12sp"
+            android:layout_marginTop="8dp"
+            android:textColor="?attr/colorOnSurfaceVariant" />
+
+        <TextView
+            android:id="@+id/tvTanggalDiubah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:layout_marginTop="2dp"
+            tools:text="22 Oktober 2026 - 14:00" />
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:gravity="center">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEdit"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="Edit Tugas"
+                app:icon="@android:drawable/ic_menu_edit" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHapus"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="Hapus"
+                android:textColor="?attr/colorError"
+                app:icon="@android:drawable/ic_menu_delete"
+                app:iconTint="?attr/colorError"
+                app:strokeColor="?attr/colorError" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
